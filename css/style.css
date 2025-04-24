@@ -1,0 +1,322 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #EADDCA;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #5a4a42;
+}
+
+/* Formulário principal */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 2.5rem 2rem;
+    border: 2px dashed #DAA06D;
+    border-radius: 18px;
+    background-color: #EADDCA;
+    box-shadow: 0 0 0 4px #EADDCA, 3px 3px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+    margin: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Título estilizado */
+.form .heading {
+    color: #DAA06D;
+    background-color: transparent;
+    letter-spacing: 0.4em;
+    text-align: center;
+    padding: 0.8em 0 1.8em;
+    text-shadow: inset -1px -1px 1px rgba(218, 160, 109, 0.3);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.form .heading::after {
+    content: '';
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #DAA06D, transparent);
+}
+
+/* Container de inputs */
+.input-container {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Inputs */
+.form .input {
+    outline: none;
+    padding: 0.9em 1.2em;
+    border: 1px solid #DAA06D;
+    color: #8B4513;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    height: 3.2em;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.form .input:focus {
+    border-color: #B78D65;
+    box-shadow: 0 0 0 3px rgba(218, 160, 109, 0.2);
+    background-color: white;
+}
+
+/* Placeholder */
+::placeholder {
+    color: #DAA06D;
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+/* Botão  */
+.form .btn {
+    align-self: center;
+    margin-top: 1rem;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #E5AA70;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    transition: all 0.3s ease;
+    padding: 1.1em 2.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form .btn:hover {
+    background-color: #DAA06D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.form .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form .btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40px;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.3s;
+}
+
+.form .btn:hover::after {
+    left: 120%;
+}
+
+#lista {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin: 1.5rem 0 0;
+}
+
+#lista li {
+    padding: 1.3em 1.6em;
+    margin-bottom: 1em;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+}
+
+#lista li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 0;
+}
+
+#lista li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+#lista li .task-text {
+    position: relative;
+    z-index: 1;
+    flex-grow: 1;
+    padding-right: 1.5em;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+#lista li .delete-btn {
+    background: none;
+    border: none;
+    color: #DAA06D;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+    z-index: 1;
+    padding: 0.4em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8em;
+    height: 1.8em;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+#lista li .delete-btn:hover {
+    background-color: rgba(218, 160, 109, 0.15);
+    color: #c62828;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Efeitos de Prioridade */
+.item.prioridade-1 {
+    border-left-color: #ff6b6b;
+    background-color: rgba(255, 235, 235, 0.7);
+    color: #c62828;
+}
+
+.item.prioridade-2 {
+    border-left-color: #ffa502;
+    background-color: rgba(255, 248, 230, 0.7);
+    color: #e65100;
+}
+
+.item.prioridade-3 {
+    border-left-color: #2ed573;
+    background-color: rgba(235, 248, 240, 0.7);
+    color: #2e7d32;
+}
+
+/* Efeito de tarefa concluída */
+.Check {
+    position: relative;
+    text-decoration: line-through;
+    color: #888 !important;
+    background-color: rgba(245, 245, 245, 0.7) !important;
+    border-left-color: #b8b8b8 !important;
+}
+
+.Check::after {
+    content: '✓';
+    position: absolute;
+    right: 1.6em;
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+    
+    .heading {
+        letter-spacing: 0.3em;
+        font-size: 1.2rem;
+        padding-bottom: 1.5em;
+    }
+    
+    .input-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .form .input {
+        width: 100%;
+    }
+    
+    #lista li {
+        padding: 1.1em 1.3em;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8em;
+    }
+    
+    #lista li .delete-btn {
+        align-self: flex-end;
+        margin-top: -1.8em;
+    }
+    
+    .Check::after {
+        right: 1.3em;
+        top: 1.1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .form {
+        padding: 1.5rem 1.2rem;
+        margin: 0.5rem;
+    }
+    
+    .heading {
+        letter-spacing: 0.2em;
+        font-size: 1.1rem;
+        padding: 0.6em 0 1.3em;
+    }
+    
+    .form .btn {
+        padding: 1em;
+        max-width: none;
+    }
+    
+    #lista li {
+        padding: 1em 1.1em;
+        border-radius: 12px;
+    }
+    
+    #lista li .task-text {
+        padding-right: 0;
+    }
+}

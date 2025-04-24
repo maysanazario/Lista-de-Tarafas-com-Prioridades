@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Elegante</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form">
+        <h2 class="heading">TAREFAS</h2>
+        <div class="input-container">
+            <input type="text" id="adicionar_tarefas" class="input" placeholder="Escreva uma Tarefa"> 
+            <select name="" id="prioridade" class="input">
+                <option value="3">Baixa</option>
+                <option value="2">Média</option>
+                <option value="1">Alta</option>
+            </select>
+        </div>
+        <input type="button" value="ADICIONAR" onclick="adicionarTarefa()" class="btn">
+        <ul id="lista"></ul>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
