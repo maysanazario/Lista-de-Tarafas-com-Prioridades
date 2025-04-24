@@ -20,8 +20,11 @@
 
 [![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
 
-## � Como usar
+## Como usar
 
 1. 📥 Adicione tarefas (texto + prioridade)  
 2. 🔄 Lista se reorganiza automaticamente  
-3. ✅ Foco nas tarefas prioritárias  
+3. ✅ Foco nas tarefas prioritárias
+
+# Link da Página 
+<a href="https://maysanazario.github.io/Lista-de-Tarafas-com-Prioridades/">Clique Aqui!</a>
