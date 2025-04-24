@@ -27,4 +27,4 @@
 3. ✅ Foco nas tarefas prioritárias
 
 # Link da Página 
-<a href="https://maysanazario.github.io/Lista-de-Tarafas-com-Prioridades/">Clique Aqui!</a>
+<a target="_blank" href="https://maysanazario.github.io/Lista-de-Tarafas-com-Prioridades/">Clique Aqui!</a>
